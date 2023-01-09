@@ -6,7 +6,7 @@ Este proyecto está creado y optimizado para cumplir los objetivos solicitados e
 
 ### Home
 
-En el Home se encuentran 2 categorías seleccionables *"Smartphones y Smartwatch"*
+En el Home se encuentran 2 categorías seleccionables _"Smartphones y Smartwatch"_
 
 ### Detalle del Producto
 
@@ -28,10 +28,33 @@ Una vez completado el formulario, se debe clickear `Generar Orden de Compra`
 
 #### Orden de Compra
 
+#### Productos
+
+Los productos se pueden agregar desde http://localhost:3000/addproducts cumpliendo los formatos solicitados en el formulario.
+
+Los productos se agregarán en la base de datos con el siguiente formato:
+
+
+
+```
+[
+    items: {
+        category: "",
+        image: "",
+        price: "",
+        title: ""
+    }
+]
+```
+
+
+#### Orden de Compra
+
 Al generar la Orden de compra. se grea en la base de datos un nuevo objeto con el formato:
 
 ```
 {
+forms:{
     buyer: {
         address: "",
         email: "",
@@ -45,9 +68,5 @@ Al generar la Orden de compra. se grea en la base de datos un nuevo objeto con e
     },
     total: "",
   }
+}
 ```
-#### Productos
-
-Los productos se pueden agregar desde http://localhost:3000/addproducts cumpliendo los formatos solicitados en el formulario.
-
-
