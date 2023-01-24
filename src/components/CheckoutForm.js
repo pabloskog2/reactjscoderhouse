@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { addDoc, getFirestore, collection } from "firebase/firestore";
 import { useCartContext } from "../context/CartContext";
+import { Navigate } from "react-router-dom";
 
 const CheckoutForm = () => {
-  const { cart, totalPrice, totalProducts } = useCartContext();
+  const { cart, totalPrice, totalProducts, clearCart } = useCartContext();
   const [formCheckout, setFormCheckout] = useState({});
+  const [confirm, setConfirm] = useState(false);
+
 
   const initialValue = {
     name: formCheckout.name,
@@ -32,8 +35,21 @@ const CheckoutForm = () => {
     e.preventDefault();
     const db = getFirestore();
     const formsCollection = collection(db, "forms");
-    addDoc(formsCollection, delivery).then(({ id }) => console.log(id));
+    addDoc(formsCollection, delivery)
+      .then(({ id }) => console.log(id))
+      .then(clearCart());
+      setConfirm(true)
   };
+
+  if (confirm) {
+    return (
+      <Navigate
+        to={{
+          pathname: "/thankyou",
+        }}
+      />
+    );
+  }
 
   return (
     <div>

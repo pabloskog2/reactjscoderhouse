@@ -79,7 +79,7 @@ const AddProductForm = () => {
             onChange={changeHandler}
           />
 
-          <button className="btn btn-success btn-md mt-4">Comprar</button>
+          <button className="btn btn-success btn-md mt-4">Agregar a la Base de Datos de Firebase</button>
         </form>
       </div>
     </div>

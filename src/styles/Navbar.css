@@ -1,17 +1,22 @@
 .cart-widget {
-    position: relative;
-    cursor: pointer;
-    text-align: center;
-  }
-  
-  .qty-display {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    background-color: rgb(232, 232, 232);
-    border-radius: 50%;
-    font-size: 12px;
-    position: absolute;
-    text-align: center;
-    line-height: 17px;
-  }
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+
+.qty-display {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: rgb(232, 232, 232);
+  border-radius: 50%;
+  font-size: 12px;
+  position: absolute;
+  text-align: center;
+  line-height: 17px;
+}
+
+.categoryName {
+  text-decoration: none;
+  color: grey;
+}

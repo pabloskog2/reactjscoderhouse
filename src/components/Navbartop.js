@@ -22,6 +22,15 @@ function Navbartop() {
               />
             </Navbar.Brand>
           </NavLink>
+          <NavLink className="categoryName" to="category/smartwatch">
+            Smartwatch
+          </NavLink>
+          <NavLink className="categoryName" to="category/smartphone">
+            Smartphone
+          </NavLink>
+          <NavLink className="categoryName" to="category/notebooks">
+            Notebooks
+          </NavLink>
           <NavLink to="/cart">
             <CartWidget />
           </NavLink>

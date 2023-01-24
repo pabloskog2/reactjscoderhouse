@@ -6,6 +6,7 @@ import ItemDetail from "../pages/ItemDetail";
 const ItemDetailContainer = () => {
   const { id } = useParams();
   const [item, setItem] = useState([]);
+  
   useEffect(() => {
     const db = getFirestore();
     const itemRef = doc(db, "items", id);
