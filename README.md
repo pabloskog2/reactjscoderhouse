@@ -1,4 +1,4 @@
-# Proyecto de Eccommerce para clase ReactJS Coderhouse
+# Proyecto de Ecommerce para clase ReactJS Coderhouse
 
 Este proyecto está creado y optimizado para cumplir los objetivos solicitados en la asignatura React JS de CoderHouse.
 
